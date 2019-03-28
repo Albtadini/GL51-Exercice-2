@@ -1,0 +1,47 @@
+
+public class PictureInfomations {
+    public double width;
+	  public double height;
+    public String path;
+    public String Name;
+}
+
+public interface PictureResizer {
+    public Picture resize(Picture resize);
+}
+
+@Singleton
+public class PictureResizerPhoto implements PictureResizer {
+    public Picture resize(Picture resize) {}
+}
+
+@Singleton
+public class PictureResizerThumbnail implements PictureResizer{
+    public Picture resize(Picture resize) {}
+}
+
+public class PictureImport {
+    public Picture importPicture(){}
+}
+public interface DBconnectionInterface {
+    void connect(); 
+    void UpdateDataBase(PictureInfomations info);
+}
+
+@Singleton
+public class dbDBconnection implements DBconnectionInterface {
+    public void connect(){}
+    public void UpdateDataBase(PictureInfomations info) {}
+}
+
+public interface Cloud {
+    void stockercloud(pictureInformation photo,pictureInformation thumbnail);
+}
+
+@Singleton
+public class stockcloud implements Cloud {
+    public void  stockercloud(pictureInformation photo,pictureInformation thumbnail){]
+
+}
+
+
